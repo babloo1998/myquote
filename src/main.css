@@ -1,0 +1,87 @@
+body {
+  background: url("https://images.pexels.com/photos/716398/pexels-photo-716398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"); }
+
+.App .Navigation a {
+  font-size: 20px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(#ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+.App .Navigation img {
+  height: 30px;
+  width: 30px; }
+.App .post-container {
+  margin-top: 30px; }
+.App h2 {
+  font-size: 20px;
+  background: -webkit-linear-gradient(#ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+.App .post {
+  text-align: center;
+  width: 90%; }
+  .App .post input, .App .post textarea {
+    color: white;
+    background: none; }
+  .App .post .title {
+    margin-top: 35px; }
+  .App .post .button-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around; }
+  .App .post button {
+    width: 40%;
+    cursor: pointer; }
+.App .allpost {
+  text-align: center;
+  color: red; }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background: url("https://images.pexels.com/photos/716398/pexels-photo-716398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: auto; }
+
+  .googleLogin {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center; }
+    .googleLogin button {
+      margin-top: 30px;
+      width: 40%;
+      padding: 10px; }
+
+  .allpost {
+    width: 100%; }
+    .allpost .posts {
+      padding: 20px;
+      width: 100%;
+      text-align: left; }
+      .allpost .posts .post-nav {
+        display: flex;
+        padding: 10px;
+        background: -webkit-linear-gradient(50deg, #ff6ec4, #7873f5) !important;
+        justify-content: space-between; }
+        .allpost .posts .post-nav img {
+          height: 30px;
+          width: 30px; }
+      .allpost .posts .post-title {
+        color: white;
+        font-weight: 900;
+        margin: 0; }
+      .allpost .posts .post-message {
+        height: 150px;
+        overflow: scroll;
+        padding: 10px;
+        color: white;
+        font-weight: 500;
+        background: #684756;
+        margin: 0px; }
+        .allpost .posts .post-message::-webkit-scrollbar {
+          width: 0 !important; }
+      .allpost .posts .post-date {
+        font-size: 15px;
+        padding: 10px;
+        background: #977390;
+        color: white; } }
+
+/*# sourceMappingURL=main.css.map */
