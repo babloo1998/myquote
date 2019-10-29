@@ -30,6 +30,20 @@ body{
         input, textarea{
             color: white;
             background: none;
+            &::-webkit-input-placeholder {
+                color: white;
+            }
+        }
+        .dropdown{
+            select{
+                width: 100%;
+                color: white;
+                background: #231f20;   
+                margin-bottom: 25px;
+                border: 1px solid #ced4da;
+                border-radius: .25rem;
+                padding: .375rem .75rem;
+            }
         }
         .title{
             margin-top: 35px;
@@ -66,7 +80,8 @@ body{
             padding: 10px;
         }
     }
-    .allpost{
+    .allpost,.love{
+        text-align: center;
         width: 100%;
         .posts{
             padding: 20px;
@@ -105,6 +120,16 @@ body{
                 color: white;
             }
         }
-}
+    }
+    .viewpost{
+        display: flex;
+        flex-wrap: wrap;
+        button{
+            margin-top: 25px;
+            margin-left: 25px;
+            width: 35%;
+            height: 35%;
+        }
+    }
 
   }

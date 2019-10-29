@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+//NPM module
 import { GoogleLogin } from 'react-google-login';
  
 class Login extends Component {
@@ -8,7 +10,7 @@ class Login extends Component {
       }
 
     onClickHandler = () =>{
-        this.props.history.push("allpost")
+        this.props.history.push("viewpost")
     }  
       
     render(){

@@ -23,6 +23,16 @@ body {
   .App .post input, .App .post textarea {
     color: white;
     background: none; }
+    .App .post input::-webkit-input-placeholder, .App .post textarea::-webkit-input-placeholder {
+      color: white; }
+  .App .post .dropdown select {
+    width: 100%;
+    color: white;
+    background: #231f20;
+    margin-bottom: 25px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: .375rem .75rem; }
   .App .post .title {
     margin-top: 35px; }
   .App .post .button-wrapper {
@@ -50,25 +60,26 @@ body {
       width: 40%;
       padding: 10px; }
 
-  .allpost {
+  .allpost, .love {
+    text-align: center;
     width: 100%; }
-    .allpost .posts {
+    .allpost .posts, .love .posts {
       padding: 20px;
       width: 100%;
       text-align: left; }
-      .allpost .posts .post-nav {
+      .allpost .posts .post-nav, .love .posts .post-nav {
         display: flex;
         padding: 10px;
         background: -webkit-linear-gradient(50deg, #ff6ec4, #7873f5) !important;
         justify-content: space-between; }
-        .allpost .posts .post-nav img {
+        .allpost .posts .post-nav img, .love .posts .post-nav img {
           height: 30px;
           width: 30px; }
-      .allpost .posts .post-title {
+      .allpost .posts .post-title, .love .posts .post-title {
         color: white;
         font-weight: 900;
         margin: 0; }
-      .allpost .posts .post-message {
+      .allpost .posts .post-message, .love .posts .post-message {
         height: 150px;
         overflow: scroll;
         padding: 10px;
@@ -76,12 +87,21 @@ body {
         font-weight: 500;
         background: #684756;
         margin: 0px; }
-        .allpost .posts .post-message::-webkit-scrollbar {
+        .allpost .posts .post-message::-webkit-scrollbar, .love .posts .post-message::-webkit-scrollbar {
           width: 0 !important; }
-      .allpost .posts .post-date {
+      .allpost .posts .post-date, .love .posts .post-date {
         font-size: 15px;
         padding: 10px;
         background: #977390;
-        color: white; } }
+        color: white; }
+
+  .viewpost {
+    display: flex;
+    flex-wrap: wrap; }
+    .viewpost button {
+      margin-top: 25px;
+      margin-left: 25px;
+      width: 35%;
+      height: 35%; } }
 
 /*# sourceMappingURL=main.css.map */

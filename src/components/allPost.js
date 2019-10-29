@@ -12,34 +12,171 @@ class AllPost extends Component {
         }
     }
     componentDidMount(){
-        axios.get('https://jsonbox.io/box_bcad4e3ef86ec3386014').then(resp => {
+        const target = this.props.history.location.state.target;
+        if(target === "love"){
+        axios.get('https://jsonbox.io/box_1db29d1e0a534d5a8cf8').then(resp => {
             this.setState({
                 data:resp.data
             })
-        });
-    }
+        })
+        }
+        else if(target === "life"){
+            axios.get('https://jsonbox.io/box_079dd24ca8b8a73a6089').then(resp => {
+                this.setState({
+                    data:resp.data
+                })
+            })
+        }
+        else if(target === "shayari"){
+            axios.get('https://jsonbox.io/box_8db6c56a3857a94b255c').then(resp => {
+                this.setState({
+                    data:resp.data
+                })
+            })
+        }
+        else if(target === "sorry"){
+            axios.get('https://jsonbox.io/box_f1af4cfd487a99195128').then(resp => {
+                this.setState({
+                    data:resp.data
+                })
+            })
+            }
+            else if(target === "humour"){
+                axios.get('https://jsonbox.io/box_f7a21cd90a65521b3b5a').then(resp => {
+                    this.setState({
+                        data:resp.data
+                    })
+                })
+            }
+            else if(target === "erotic"){
+                axios.get('https://jsonbox.io/box_889f51fa3b30d3f9fc40').then(resp => {
+                    this.setState({
+                        data:resp.data
+                    })
+                })
+            }
+            else{
+                axios.get('https://jsonbox.io/box_bcad4e3ef86ec3386014').then(resp => {
+                    this.setState({
+                        data:resp.data
+                    })
+                })
+            }
+}
 
     sendID = (id) =>{
         this.setState({
             isLoading:  true
         });
-        axios.delete(`https://jsonbox.io/box_bcad4e3ef86ec3386014/${id}`)   
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-        this.getMyDataBack();
+
+        const target = this.props.history.location.state.target;
+        if(target === "love"){
+        axios.delete(`https://jsonbox.io/box_1db29d1e0a534d5a8cf8/${id}`)   
+        .then(res => {
+            this.getMyDataBack();
       })
+        }
+        else if(target === "life"){
+        axios.delete(`https://jsonbox.io/box_079dd24ca8b8a73a6089/${id}`)   
+        .then(res => {
+            this.getMyDataBack();
+        })
+            
+            
+        }
+        else if(target === "shayari"){
+        axios.delete(`https://jsonbox.io/box_8db6c56a3857a94b255c/${id}`)   
+        .then(res => {
+            this.getMyDataBack();
+        })
+        }
+        else if(target === "sorry"){
+        axios.delete(`https://jsonbox.io/box_f1af4cfd487a99195128/${id}`)   
+        .then(res => {
+            this.getMyDataBack();
+        })
+        }
+        else if(target === "humour"){
+        axios.delete(`https://jsonbox.io/box_f7a21cd90a65521b3b5a/${id}`)   
+        .then(res => {
+            this.getMyDataBack();
+        })
+            }
+            else if(target === "erotic"){
+            axios.delete(`https://jsonbox.io/box_889f51fa3b30d3f9fc40/${id}`)   
+            .then(res => {  
+            this.getMyDataBack();
+        })
+            }
+            else{
+            axios.delete(`https://jsonbox.io/box_bcad4e3ef86ec3386014/${id}`)   
+            .then(res => {
+            this.getMyDataBack();
+            })
+        }
     }
     
     getMyDataBack =()=>{
-        axios.get('https://jsonbox.io/box_bcad4e3ef86ec3386014').then(resp => {
-            console.log("@@@@@",resp.data)
-            this.setState({
-                data:resp.data,
-                isLoading:false
+        const target = this.props.history.location.state.target;
+        if(target === "love"){
+            axios.get('https://jsonbox.io/box_1db29d1e0a534d5a8cf8').then(resp => {
+                this.setState({
+                    data:resp.data,
+                    isLoading: false
+                })
             })
-        });
+            }
+            else if(target === "life"){
+                axios.get('https://jsonbox.io/box_079dd24ca8b8a73a6089').then(resp => {
+                    this.setState({
+                        data:resp.data,
+                        isLoading: false
+                    })
+                })
+            }
+            else if(target === "shayari"){
+                axios.get('https://jsonbox.io/box_8db6c56a3857a94b255c').then(resp => {
+                    this.setState({
+                        data:resp.data,
+                        isLoading: false
+                    })
+                })
+            }
+            else if(target === "sorry"){
+                axios.get('https://jsonbox.io/box_f1af4cfd487a99195128').then(resp => {
+                    this.setState({
+                        data:resp.data,
+                        isLoading: false
+                    })
+                })
+                }
+                else if(target === "humour"){
+                    axios.get('https://jsonbox.io/box_f7a21cd90a65521b3b5a').then(resp => {
+                        this.setState({
+                            data:resp.data,
+                            isLoading: false
+                        })
+                    })
+                }
+                else if(target === "erotic"){
+                    axios.get('https://jsonbox.io/box_889f51fa3b30d3f9fc40').then(resp => {
+                        this.setState({
+                            data:resp.data,
+                            isLoading: false
+                        })
+                    })
+                }
+                else{
+                    axios.get('https://jsonbox.io/box_bcad4e3ef86ec3386014').then(resp => {
+                        this.setState({
+                            data:resp.data,
+                            isLoading: false
+                        })
+                    })
+                }
     }
+
+
   render() {
     return (
     <div className="allpost">
