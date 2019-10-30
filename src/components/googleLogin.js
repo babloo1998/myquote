@@ -15,14 +15,14 @@ class Login extends Component {
       
     render(){
         return(
-            // <div className="googleLogin">
-            //     <GoogleLogin
-            //         clientId="65098940793-s974qqjqe08olac640lkefml1sdbm82f.apps.googleusercontent.com"
-            //         buttonText="Login"
-            //         onSuccess={this.responseGoogle}
-            //         onFailure={this.responseGoogle}
-            //     />
-            // <br></br>
+            <div className="googleLogin">
+                {/* <GoogleLogin
+                    clientId="65098940793-s974qqjqe08olac640lkefml1sdbm82f.apps.googleusercontent.com"
+                    buttonText="Login"
+                    onSuccess={this.responseGoogle}
+                    onFailure={this.responseGoogle}
+                /> */}
+            <br></br>
             <button className="btn btn-danger" onClick={this.onClickHandler}>view post</button>
             </div>
         )
