@@ -192,7 +192,10 @@ class AllPost extends Component {
                                <img alt="img" onClick={() =>{this.sendID(data._id)}} src="https://cdn2.iconfinder.com/data/icons/medical-and-health-2-16/65/64-512.png"></img>    
                            </div>
                            <p className="post-message">{data.message}</p>
-                           <p className="post-date">{data.date}</p>
+                           <div className="d-flex justify-content-between" style={{background:"#977390",padding: "10px"}}>
+                                <p className="post-date" style = {{margin: "0px"}}>{data.date}</p>
+                           </div>
+                           
                        </div>
                    ))
                   }
