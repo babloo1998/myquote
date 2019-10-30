@@ -11,7 +11,11 @@ class Login extends Component {
 
     onClickHandler = () =>{
         this.props.history.push("viewpost")
-    }  
+    } 
+    
+    onClickPost = () =>{
+        this.props.history.push("post")
+    }
       
     render(){
         return(
@@ -24,6 +28,8 @@ class Login extends Component {
                 /> */}
             <br></br>
             <button className="btn btn-danger" onClick={this.onClickHandler}>view post</button>
+                <br></br>
+            <button className="btn btn-danger" onClick={this.onClickPost}>post</button>
             </div>
         )
     }
